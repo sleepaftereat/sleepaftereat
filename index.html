@@ -45,7 +45,42 @@
         }
 
         //-------------------------识别联系人-----------------------
+        window.linkflow.setIdentities([{
+            id:"rqtest220726-02",
+            type:"externalId"
+          }])
+          linkflow.setProfile({
+             name:"220726-02",
+             nickname: "rqtest220726-02",
+             avatar: "",
+             gender: "male",
+             idCard: "1111111",
+             email: "xxx.com",
+             dateOfBirthday: "1990-10-21",
+             mobilePhone: "12341234123",
+             country: "中国",
+             state: "江苏省",
+             city: "苏州市",
+             street: "吴中",
+             props: {
+                yuan_type: "web来的",
+                test_yyp: "优质",
+                yuan_like: "随便",
+            }
+          })
 
+        linkflow.track({
+            event:"y_CreateOrder",
+            props: {
+              fr001: "创建订单",
+              fr002: new Date('2022-07-20 11:20:13'),
+              fr003: 1,
+              fr004: "false",
+              fr005: 88.88,
+              fr006: "test创建订单",
+            }
+          })
+      });
 
 
 
